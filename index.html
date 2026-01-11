@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HomeLab – Modern Health‑Fintech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <style>
+    :root {
+      --gold: #f5c77a;
+      --dark: #0a0a0b;
+      --light: #ffffff;
+      --teal: #1fb6aa;
+      --blue: #2563eb;
+      --muted: #6b7280;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: #0f172a;
+    }
+
+    section { padding: 100px 20px; }
+
+    .container { max-width: 1200px; margin: auto; }
+
+    /* ===== HERO (DARK / BRUTALIST) ===== */
+    .hero {
+      background: var(--dark);
+      color: var(--gold);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 10vw, 9rem);
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin: 0;
+    }
+
+    .hero p {
+      color: #e5e7eb;
+      max-width: 520px;
+      font-size: 1.1rem;
+      margin: 24px 0 40px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn.primary { background: var(--gold); color: #000; }
+    .btn.secondary { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+
+    /* ===== TRUST BAR ===== */
+    .trust {
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    .trust span {
+      margin: 0 16px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* ===== SECTIONS ===== */
+    h2.section-title {
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    }
+
+    /* ===== BOOKING FLOW ===== */
+    .step { margin-bottom: 24px; }
+    .step h4 { margin-bottom: 12px; }
+
+    select, input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #020617;
+      color: #e5e7eb;
+      padding: 60px 20px;
+    }
+
+    footer a { color: var(--gold); text-decoration: none; }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="warp">HomeLab</h1>
+      <p>Fast, affordable diagnostics and wellness—powered by smart health cards.</p>
+      <div class="cta-group">
+        <button class="btn primary">Book a Test</button>
+        <button class="btn secondary">Buy Smart Health Card</button>
+        <button class="btn secondary">Explore Wellness</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="container">
+      <span>Partner Labs</span>
+      <span>ISO‑Compliant</span>
+      <span>Secure Payments</span>
+      <span>Trusted by Families</span>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="container">
+      <h2 class="section-title scrub">How HomeLab Works</h2>
+      <div class="grid">
+        <div class="card">Choose a test or wellness plan</div>
+        <div class="card">Book home or lab visit</div>
+        <div class="card">Pay via card or mobile money</div>
+        <div class="card">Get results digitally</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section style="background:#f8fafc">
+    <div class="container">
+      <h2 class="section-title scrub">Our Products</h2>
+      <div class="grid">
+        <div class="card">Diagnostics</div>
+        <div class="card">Smart Health Card</div>
+        <div class="card">KidCare+</div>
+        <div class="card">Women’s Wellness</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKINGS -->
+  <section>
+    <div class="container">
+      <h2 class="section-title scrub">Book a Service</h2>
+      <div class="card">
+        <div class="step">
+          <h4>Select Service</h4>
+          <select><option>Test Package</option><option>Wellness</option><option>Consultation</option></select>
+        </div>
+        <div class="step">
+          <h4>Category</h4>
+          <select><option>Adult</option><option>KidCare+</option><option>Women’s Wellness</option></select>
+        </div>
+        <div class="step">
+          <h4>Date & Time</h4>
+          <input type="datetime-local" />
+        </div>
+        <button class="btn primary">Confirm Booking</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Contact: WhatsApp • Email • Phone</p>
+      <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      <p>Powered by HomeLab Health‑Fintech</p>
+    </div>
+  </footer>
+
+<script>
+  // LENIS
+  const lenis = new Lenis({ smooth: true, lerp: 0.08 });
+  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  // GSAP
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Scroll‑scrub headings
+  gsap.utils.toArray('.scrub').forEach(el => {
+    gsap.fromTo(el,
+      { x: -100, rotation: -3, opacity: 0 },
+      { x: 0, rotation: 0, opacity: 1,
+        scrollTrigger: { trigger: el, start: 'top 80%', scrub: true }
+      }
+    );
+  });
+
+  // Velocity‑based warp
+  let proxy = { skew: 0 };
+  let skewSetter = gsap.quickSetter('.warp', 'skewX', 'deg');
+
+  ScrollTrigger.create({
+    onUpdate: self => {
+      let velocity = self.getVelocity() / -300;
+      proxy.skew = gsap.utils.clamp(-15, 15, velocity);
+      gsap.to(proxy, { skew: 0, duration: 0.8, ease: 'power3', onUpdate: () => skewSetter(proxy.skew) });
+    }
+  });
+</script>
+
+</body>
+</html>
